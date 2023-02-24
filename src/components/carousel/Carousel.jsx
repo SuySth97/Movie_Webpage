@@ -54,6 +54,10 @@ const Carousel = ({ data, loading }) => {
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
         />
+        <BsFillArrowRightCircleFill
+          className="carouselRightNav arrow"
+          onClick={() => navigation("right")}
+        />
         {!loading ? (
           <div className="carouselItems" ref={carouselContainer}>
             {data?.map((item) => {
@@ -87,10 +91,6 @@ const Carousel = ({ data, loading }) => {
             {skItem()}
           </div>
         )}
-        <BsFillArrowRightCircleFill
-          className="carouselRightNav arrow"
-          onClick={() => navigation("right")}
-        />
       </ContentWrapper>
     </div>
   );
