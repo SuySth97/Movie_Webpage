@@ -1,0 +1,13 @@
+.genres{
+  display: flex;
+  gap: 5px;
+  .genre{
+    background: linear-gradient(45deg, #f89d00c7 0%,#da2f68ab 100% );
+    padding: 4px 5px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #fff;
+    white-space: nowrap;
+  }
+}
