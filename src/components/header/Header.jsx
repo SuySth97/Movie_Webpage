@@ -81,11 +81,6 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="menuItem">
-            <NavLink to="/explore/series" className="menuItem">
-              Series
-            </NavLink>
-          </li>
-          <li className="menuItem">
             <NavLink to="/explore/tv" className="menuItem">
               TV shows
             </NavLink>
