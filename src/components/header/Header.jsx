@@ -101,6 +101,7 @@ const Header = () => {
           <li className="menuItemUser">
             <AiOutlineUser />
           </li>
+          <button>Create Account</button>
         </ul>
 
         <div className="mobileMenuItems">

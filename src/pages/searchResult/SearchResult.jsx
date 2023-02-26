@@ -5,7 +5,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import "./searchResult.scss";
 
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
-import { fetchDataFromApi } from "../../utils/api";
+import { fetchBySearch,fetchByGenres } from "../../utils/api";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
 import noResults from "../../assets/no-results.png";
@@ -18,8 +18,9 @@ const SearchResult = () => {
 
   const fetchInitialData = () => {
     setLoading(true);
-    fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then(
+    fetchBySearch('tv',query,pageNum).then(
       (res) => {
+        console.log(res);
         setData(res);
         setPageNum((prev) => prev + 1);
         setLoading(false);
@@ -28,7 +29,7 @@ const SearchResult = () => {
   };
 
   const fetchNextPageData = () => {
-    fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then(
+    fetchBySearch(tv,query,pageNum).then(
       (res) => {
         if (data?.results) {
           setData({
